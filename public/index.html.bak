@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Alex Crawford</title>
+
+        <link rel="stylesheet" href="css/screen.css">
+
+        <script src="js/libs/custom.modernizr.js"></script>
+
+    </head>
+    <body>
+
+    	<script type="text/x-handlebars" data-template-name="application">
+
+			<nav class="top-bar" style="">
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="/">Home</a></h1>
+					</li>
+					<li class="toggle-topbar menu-icon">
+						<a href="#"><span>Menu</span></a>
+					</li>
+				</ul>
+				<section class="top-bar-section">
+					<ul class="left">
+						<li class="divider"></li>
+						<li><a href="#">Categories</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Products</a></li>
+						<li class="divider"></li>
+					</ul>
+				</section>
+				<section class="top-bar-section">
+					<ul class="right">
+						<li class="divider"></li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+				</section>
+			</nav>
+
+            <div class="row">
+
+                <div class="large-12 columns">
+
+                    {{ outlet }}
+
+                </div>
+
+            </div>
+
+    	</script>
+
+        <script type="text/x-handlebars" data-template-name="niggy">
+            <h1>Index</h1>
+            {{view.message}}
+        </script>
+
+    	<script type="text/x-handlebars" data-template-name="articles">
+
+    		Articles
+
+    		{{ outlet }}
+
+    	</script>
+
+    	<script type="text/x-handlebars" data-template-name="articles/show">
+
+    		Showing Article
+
+    	</script>
+
+    	<!-- build:js js/libs.js -->
+    	<script src="js/libs/jquery.js"></script>
+    	<script src="js/libs/foundation.js"></script>
+    	<script src="js/libs/handlebars.js"></script>
+    	<script src="js/libs/ember.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js js/global.js -->
+        <script src="js/global.js"></script>
+        <!-- build:js js/global.js -->
+
+    	<script>$(document).foundation();</script>
+
+	</body>
+</html>

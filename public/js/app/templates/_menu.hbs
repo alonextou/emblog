@@ -1,0 +1,33 @@
+<nav class="top-bar" style="">
+	<ul class="title-area">
+		<li class="name">
+			<h1>
+				{{#linkTo index}}Home{{/linkTo}}
+			</h1>
+		</li>
+		<li class="toggle-topbar menu-icon">
+			<a href="#"><span>Menu</span></a>
+		</li>
+	</ul>
+	<section class="top-bar-section">
+		<ul class="left">
+			<li class="divider"></li>
+			<li>
+				{{#linkTo articles}}Articles{{/linkTo}}
+			</li>
+			<li class="divider hide-for-small"></li>
+		</ul>
+	</section>
+	<section class="top-bar-section">
+		<ul class="right">
+			<li class="divider"></li>
+			<li>
+				{{#if controllers.auth.isGuest}}
+				    {{#linkTo login}}Login{{/linkTo}}
+			    {{else}}
+			    	{{#linkTo logout}}Logout{{/linkTo}}
+				{{/if}}
+			</li>
+		</ul>
+	</section>
+</nav>

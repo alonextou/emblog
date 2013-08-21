@@ -1,0 +1,12 @@
+<ul class="no-bullet">
+
+    {{#each article in model}}
+
+        {{#linkTo 'articles.show' article}}
+        	<li>{{article.title}}</li>
+    	{{/linkTo}}
+
+        <li>{{article.content}}</li>
+    {{/each}}
+    
+</ul>
